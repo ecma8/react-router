@@ -1,0 +1,201 @@
+{
+    "menuList":[
+        {
+            "routerName":"index",
+            "name":"首页",
+            "list": [
+                {
+                    "title": "首页预览",
+                    "list": [
+                        {
+                            "router": "console",
+                            "name": "首页预览",
+                            "path":"console"
+                        }
+                    ]
+                },
+                {
+                    "title": "用户管理",
+                    "list": [
+                        {
+                            "router": "teacher",
+                            "name": "教师管理",
+                            "path":"teacher"
+                        },
+                        {
+                            "router": "student",
+                            "name": "学生管理",
+                            "path":"student"
+                        }
+                    ]
+                },
+                {
+                    "title": "云盘",
+                    "list": [
+                        {
+                            "router": "document",
+                            "name": "文档管理",
+                            "path":"document"
+
+                        },
+                        {
+                            "router": "video",
+                            "name": "视频管理",
+                            "path":"video"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "routerName":"cloud",
+            "name":"云教室",            
+            "list": [
+                {
+                    "title": "教室管理",
+                    "list": [
+                        {
+                            "router": "one",
+                            "name": "一对一",
+                            "path":"one"
+
+                        },
+                        {
+                            "router": "more",
+                            "name": "一对多",
+                            "path":"more"
+                        },
+                        {
+                            "router": "trusteeship",
+                            "name": "托管班",
+                            "path":"trusteeship"
+                        }
+                    ]
+                },
+                {
+                    "title": "授课统计",
+                    "list": [
+                        {
+                            "router": "teachingCount",
+                            "name": "教师授课统计",
+                            "path":"teachingCount"
+                        },
+                        {
+                            "router": "studyingCount",
+                            "name": "学生上课统计",
+                            "path":"studyingCount"
+                        },
+                        {
+                            "router": "courseCount",
+                            "name": "课程统计",
+                            "path":"courseCountDetail"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "routerName":"live",
+            "name":"直播服务",
+            "list": [
+                {
+                    "title": "直播管理",
+                    "list": [
+                        {
+                            "router": "liveManage",
+                            "name": "直播管理",
+                            "path":"manage"
+                        },
+                        {
+                            "router": "liveExtend",
+                            "name": "直播推广",
+                            "path":"extend"
+                        },
+                        {
+                            "router": "liveGoods",
+                            "name": "商品管理",
+                            "path":"goods"
+                        }
+                    ]
+                },
+                {
+                    "title": "直播统计",
+                    "list": [
+                        {
+                            "router": "liveCount",
+                            "name": "直播数据统计",
+                            "path":"count"
+                        },
+                        {
+                            "router": "liveMobileCount",
+                            "name": "手机登记统计",
+                            "path":"mobileCount"
+                        },
+                        {
+                            "router": "livePromotion",
+                            "name": "直播收益统计",
+                            "path":"promotion"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "routerName":"online",
+            "name":"网校平台",
+            "list": [
+                {
+                    "title": "课程管理",
+                    "list": [
+                        {
+                            "router": "liveCourse",
+                            "name": "直播课",
+                            "path":"liveCourse"
+                        },
+                        {
+                            "router": "columnCourse",
+                            "name": "专栏课",
+                            "path":"columnCourse"
+                        },
+                        {
+                            "router": "oneCourse",
+                            "name": "一对一",
+                            "path":"oneCourse"
+                        },
+                        {
+                            "router": "moreCourse",
+                            "name": "小班课",
+                            "path":"moreCourse"
+                        }
+                    ]
+                },
+                {
+                    "title": "网校配置",
+                    "list": [
+                        {
+                            "router": "configure",
+                            "name": "网校配置",
+                            "path":"configure"
+                        }
+                    ]
+                },
+                {
+                    "title": "网校统计",
+                    "list": [
+                        {
+                            "router": "studentCount",
+                            "name": "学生统计",
+                            "path":"studentCount"
+                        },
+                        {
+                            "router": "courseCount",
+                            "name": "课程统计",
+                            "path":"courseCount"
+                        }
+                    ]
+                }
+            ]
+        }
+
+    ]
+}
