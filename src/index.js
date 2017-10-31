@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './components/root';
+import Root from './components/router';
 import registerServiceWorker from './registerServiceWorker';
 
 import { createStore  } from 'redux'
-import { Provider , connect} from 'react-redux'
+import { Provider } from 'react-redux'
 
 let initState = {
-    count: 0,
     isLoading:false
 };
 function counter(state, action) {

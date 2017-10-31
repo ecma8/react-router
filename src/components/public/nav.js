@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import menuList from '../../static/json/menu.json';
-import {IndexLink} from 'react-router';
+import {IndexLink , Link} from 'react-router';
 import logo from '../../static/img/logo.svg';
 import head from '../../static/img/head.svg';
 import money from '../../static/img/money.svg';
@@ -23,10 +23,10 @@ class Nav extends Component{
         let item = this.state.menuList.map((item,index) => {
             return (
                 <li key={item.routerName}>
-                    <IndexLink  to={'/'+item.routerName} activeClassName="active">
+                    <Link  to={'/'+item.routerName} activeClassName="active">
                         <img src={require('../../static/img/'+item.routerName+'.svg')}  alt=""/>
                         <p>{item.name}</p>
-                    </IndexLink>
+                    </Link>
                 </li>
             );
         });

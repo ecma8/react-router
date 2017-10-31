@@ -14,7 +14,9 @@ class one extends Component{
     };
     render() {
         return (
-            <div>这是一对一</div>
+            <div>
+                这是一对一
+            </div>
         );
     }
 }

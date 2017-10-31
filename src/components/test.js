@@ -35,7 +35,7 @@ const App = connect(
 class test extends Component {
     render() {
         return(
-            123
+            <App/>
         )
     }
 }

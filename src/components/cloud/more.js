@@ -14,7 +14,10 @@ class more extends Component{
     };
     render() {
         return (
-            <div>这是一对多</div>
+            <div>
+                这是一对多
+                {this.props.location.query.message || 'query'}
+            </div>
         );
     }
 }
