@@ -5,7 +5,6 @@ import {mapStateToProps,mapDispatchToProps} from'../redux/redux'
 class Counter extends Component {
     render() {
         const { value,isLoading, addClick ,delClick,showLoadingClick,hideLoadingClick} = this.props;
-        console.log(this.store);
         let loadingMask;
         if(isLoading)
         {
@@ -26,17 +25,7 @@ class Counter extends Component {
         )
     }
 }
-
-const App = connect(
+export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Counter);
-
-class test extends Component {
-    render() {
-        return(
-            <App/>
-        )
-    }
-}
-export default test
+)(Counter)

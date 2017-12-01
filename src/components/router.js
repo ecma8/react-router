@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Router, Route, hashHistory,IndexRedirect,routerState} from 'react-router';
+import { Router, Route, hashHistory,IndexRedirect} from 'react-router';
 
 import '../static/css/bootstrap.css'
 import '../static/css/public.css'
 import redux from './test'
+import input from './input'
 
 import home from './home';
 import index from './index';
@@ -40,9 +41,6 @@ import studentCount from './online/studentCount';
 import courseCount from './online/courseCount';
 
 class Root extends Component{
-    constructor(props) {
-        super(props);
-    }
     componentDidMount() {
 
     }
@@ -53,6 +51,7 @@ class Root extends Component{
         return (
             <Router history={hashHistory}>
                 <Route path="/redux" component={redux}/>
+                <Route path="/input" component={input}/>
                 <Route path="/" components={home}>
                     <IndexRedirect to="/index" />
                     <Route path="/index" component={index}>

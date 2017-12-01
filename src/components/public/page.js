@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import '../../static/css/page.css';
 
 class Pagination extends Component {
-    constructor(props) {
-        super(props);
-    }
     getRange () {  // 显示的页码按钮数量， 默认为 10
         return this.props.range || this.props.pages || 10;
     }

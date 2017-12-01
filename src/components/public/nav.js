@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import menuList from '../../static/json/menu.json';
-import {IndexLink , Link} from 'react-router';
+import {Link} from 'react-router';
 import logo from '../../static/img/logo.svg';
 import head from '../../static/img/head.svg';
 import money from '../../static/img/money.svg';

@@ -22,10 +22,7 @@ class Index extends Component {
     };
 
     show = () => {
-        this.context.store.dispatch({type: 'showLoading'})
-        setTimeout(() => {
-            this.context.store.dispatch({type: 'hideLoading'})
-        }, 3000)
+        this.context.store.dispatch({type: 'showLoading'});
     };
     hide = () => {
         this.context.store.dispatch({type: 'hideLoading'})
