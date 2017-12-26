@@ -15,7 +15,6 @@ class Cloud extends Component{
 
     };
     render() {
-        console.log(this.state.json);
         let item = this.state.json.map((item,index) => {
             return (
                 <li key={index}>

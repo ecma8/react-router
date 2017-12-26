@@ -3,23 +3,16 @@ import ReactDOM from 'react-dom';
 import Root from './components/router';
 import registerServiceWorker from './registerServiceWorker';
 
+
 import { createStore  } from 'redux'
 import { Provider } from 'react-redux'
 
-let initState = {
-    isLoading:false
-};
-function counter(state, action) {
-    switch (action.type) {
-        case 'showLoading':
-            return { isLoading :true};
-        case 'hideLoading':
-            return { isLoading :false};
-        default:
-            return state
-    }
-}
+import initState from './redux/state'
+import {counter} from './redux/counter'
+
+
 const store = createStore(counter, initState);
+
 ReactDOM.render(
     <Provider store={store}>
         <Root/>

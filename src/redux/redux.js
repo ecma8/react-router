@@ -1,5 +1,3 @@
-import React, { Component } from 'react'
-import { createStore } from 'redux'
 
 const showLoadingAction = { type: 'showLoading' };
 const hideLoadingAction = { type: 'hideLoading' };
@@ -15,7 +13,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         showLoadingClick: () => dispatch(showLoadingAction),
-        hideLoadingClick: () => dispatch(hideLoadingAction),
+        hideLoadingClick: () => dispatch(hideLoadingAction)
     }
 }
 export {mapStateToProps,mapDispatchToProps}

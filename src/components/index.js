@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import menuList from '../static/json/menu.json';
 import {Link} from 'react-router';
 import Pagination from '../components/public/page'
-
+import http from '../http'
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -20,12 +20,17 @@ class Index extends Component {
     componentWillUnmount() {
 
     };
-
     show = () => {
-        this.context.store.dispatch({type: 'showLoading'});
+        http.post('/index.php?c=index&a=phone')
+            .then(response=>{
+                console.log(response)
+            });
+        // this.context.store.dispatch({type: 'showLoading'});
+        // console.log(this.context.store.getState('isLoading'));
     };
     hide = () => {
-        this.context.store.dispatch({type: 'hideLoading'})
+        // this.context.store.dispatch({type: 'hideLoading'})
+        // console.log(this.context.store.getState('isLoading'));
     };
     GoPath = () => {
         console.log(this);
@@ -35,6 +40,7 @@ class Index extends Component {
         this.setState({currentPage: curPage})
     };
     render() {
+
         let item = this.state.json.map((item, index) => {
             return (
                 <li key={index}>

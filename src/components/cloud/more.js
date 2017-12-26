@@ -13,6 +13,8 @@ class more extends Component{
 
     };
     render() {
+        console.log(this.props.location.query);
+
         return (
             <div>
                 这是一对多

@@ -9,39 +9,39 @@ class Home extends Component{
         this.state={
         };
     }
-    get=(url,params,callback)=>{
-        if (params) {
-            let paramsArray = [];
-            Object.keys(params).forEach(key => paramsArray.push(key + '=' + params[key]))
-            if (url.search(/\?/) === -1) {
-                url += '?' + paramsArray.join('&')
-            } else {
-                url += '&' + paramsArray.join('&')
-            }
-        }
-        fetch(url,{
-            method: 'GET',
-        }).then(response => response.json()).then((response) => {
-            callback(response);
-        })
-    };
-    post=(url,params,callback)=>{
-        fetch(url,{
-            method: 'POST',
-            body:params
-        }).then((response) => response.json())
-        .then((responseJSON) => {
-            callback(responseJSON)
-        })
-    };
+    // get=(url,params,callback)=>{
+    //     if (params) {
+    //         let paramsArray = [];
+    //         Object.keys(params).forEach(key => paramsArray.push(key + '=' + params[key]))
+    //         if (url.search(/\?/) === -1) {
+    //             url += '?' + paramsArray.join('&')
+    //         } else {
+    //             url += '&' + paramsArray.join('&')
+    //         }
+    //     }
+    //     fetch(url,{
+    //         method: 'GET',
+    //     }).then(response => response.json()).then((response) => {
+    //         callback(response);
+    //     })
+    // };
+    // post=(url,params,callback)=>{
+    //     fetch(url,{
+    //         method: 'POST',
+    //         body:params
+    //     }).then((response) => response.json())
+    //     .then((responseJSON) => {
+    //         callback(responseJSON)
+    //     })
+    // };
     componentDidMount() {
-        let json={
-            x:1,
-            y:2
-        };
-        this.post('http://open.ecma8.com/index.php?c=Index&a=phone',this.formStringify(json),function(data){
-            console.log(data)
-        })
+        // let json={
+        //     x:1,
+        //     y:2
+        // };
+        // this.post('http://open.ecma8.com/index.php?c=Index&a=phone',this.formStringify(json),function(data){
+        //     console.log(data)
+        // })
     }
     formStringify=(json)=>{
         let form=new FormData();
@@ -55,17 +55,17 @@ class Home extends Component{
     };
     render() {
         const {isLoading} = this.props;
-        let loadingMask;
-        if(isLoading)
-        {
-            loadingMask=<Loading/>
-        }
-        else{
-            loadingMask=''
-        }
+        // let loadingMask;
+        // if(isLoading)
+        // {
+        //     loadingMask=<Loading/>
+        // }
+        // else{
+        //     loadingMask=''
+        // }
         return (
             <div>
-                {loadingMask}
+                <Loading isLoading={isLoading}/>
                 <Nav/>
                 <div>
                     {this.props.children || <span>No Content</span>}
