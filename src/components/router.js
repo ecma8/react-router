@@ -3,8 +3,11 @@ import { Router, Route, hashHistory,IndexRedirect} from 'react-router';
 
 import '../static/css/bootstrap.css'
 import '../static/css/public.css'
-import redux from './test'
-import input from './input'
+import redux from './test/test'
+import input from './test/input'
+import testHttp from './test/testHttp'
+import testRouter from './test/testRouter'
+import testRedux from './test/testRedux'
 
 import home from './home';
 import index from './index';
@@ -52,43 +55,46 @@ class Root extends Component{
             <Router history={hashHistory}>
                 <Route path="/redux" component={redux}/>
                 <Route path="/input" component={input}/>
+                <Route path="/testRouter" component={testRouter}/>
+                <Route path="/testHttp" component={testHttp}/>
+                <Route path="/testRedux" component={testRedux}/>
                 <Route path="/" components={home}>
                     <IndexRedirect to="/index" />
                     <Route path="/index" component={index}>
                         <IndexRedirect to="/index/console" />
-                        <Route path="/index/console" component={console}/>
-                        <Route path="/index/student" component={student}/>
-                        <Route path="/index/teacher" component={teacher}/>
-                        <Route path="/index/document" component={document}/>
-                        <Route path="/index/video" component={video}/>
+                        <Route path="console" component={console}/>
+                        <Route path="student" component={student}/>
+                        <Route path="teacher" component={teacher}/>
+                        <Route path="document" component={document}/>
+                        <Route path="video" component={video}/>
                     </Route>
                     <Route path="/cloud" component={cloud}>
                         <IndexRedirect to="/cloud/one" />
-                        <Route path="/cloud/one" component={one}/>
-                        <Route path="/cloud/more" component={more}/>
-                        <Route path="/cloud/trusteeship" component={trusteeship}/>
-                        <Route path="/cloud/studyingCount" component={studyingCount}/>
-                        <Route path="/cloud/teachingCount" component={teachingCount}/>
-                        <Route path="/cloud/courseCount" component={courseCountDetail}/>
+                        <Route path="one" component={one}/>
+                        <Route path="more" component={more}/>
+                        <Route path="trusteeship" component={trusteeship}/>
+                        <Route path="studyingCount" component={studyingCount}/>
+                        <Route path="teachingCount" component={teachingCount}/>
+                        <Route path="courseCount" component={courseCountDetail}/>
                     </Route>
                     <Route path="/live" component={live} >
                         <IndexRedirect to="/live/Manage" />
-                        <Route path="/live/manage" component={liveManage}/>
-                        <Route path="/live/extend" component={liveExtend}/>
-                        <Route path="/live/goods" component={liveGoods}/>
-                        <Route path="/live/count" component={liveCount}/>
-                        <Route path="/live/mobileCount" component={liveMobileCount}/>
-                        <Route path="/live/promotion" component={livePromotion}/>
+                        <Route path="manage" component={liveManage}/>
+                        <Route path="extend" component={liveExtend}/>
+                        <Route path="goods" component={liveGoods}/>
+                        <Route path="count" component={liveCount}/>
+                        <Route path="mobileCount" component={liveMobileCount}/>
+                        <Route path="promotion" component={livePromotion}/>
                     </Route>
                     <Route path="/online" component={online} >
                         <IndexRedirect to="/online/liveCourse" />
-                        <Route path="/online/liveCourse" component={liveCourse}/>
-                        <Route path="/online/columnCourse" component={columnCourse}/>
-                        <Route path="/online/oneCourse" component={oneCourse}/>
-                        <Route path="/online/moreCourse" component={moreCourse}/>
-                        <Route path="/online/configure" component={configure}/>
-                        <Route path="/online/studentCount" component={studentCount}/>
-                        <Route path="/online/courseCount" component={courseCount}/>
+                        <Route path="liveCourse" component={liveCourse}/>
+                        <Route path="columnCourse" component={columnCourse}/>
+                        <Route path="oneCourse" component={oneCourse}/>
+                        <Route path="moreCourse" component={moreCourse}/>
+                        <Route path="configure" component={configure}/>
+                        <Route path="studentCount" component={studentCount}/>
+                        <Route path="courseCount" component={courseCount}/>
                     </Route>
                 </Route>
             </Router>

@@ -20,12 +20,12 @@ axios.interceptors.response.use(data => {
     return data.data
 }, error => {
     if (error.response) {
-        switch (error.response.status) {
-            case 401:
-                // router.replace({
-                //     path: '/login'
-                // })
-        }
+        // switch (error.response.status) {
+        //     case 401:
+        //         // router.replace({
+        //         //     path: '/login'
+        //         // })
+        // }
     }
     return Promise.reject(error)
 });

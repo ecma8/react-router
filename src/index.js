@@ -10,9 +10,7 @@ import { Provider } from 'react-redux'
 import initState from './redux/state'
 import {counter} from './redux/counter'
 
-
 const store = createStore(counter, initState);
-
 ReactDOM.render(
     <Provider store={store}>
         <Root/>

@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import menuList from '../static/json/menu.json';
 import {Link} from 'react-router';
-import Pagination from '../components/public/page'
-import http from '../http'
 class Index extends Component {
     constructor(props) {
         super(props);
         this.state = {
             json: menuList.menuList[0].list,
-            currentPage: 1,
-            allPage: 30
         }
     }
-
+    static contextTypes = {
+        store: PropTypes.object,
+        router: PropTypes.object
+    };
     componentDidMount() {
 
     }
@@ -20,27 +20,7 @@ class Index extends Component {
     componentWillUnmount() {
 
     };
-    show = () => {
-        http.post('/index.php?c=index&a=phone')
-            .then(response=>{
-                console.log(response)
-            });
-        // this.context.store.dispatch({type: 'showLoading'});
-        // console.log(this.context.store.getState('isLoading'));
-    };
-    hide = () => {
-        // this.context.store.dispatch({type: 'hideLoading'})
-        // console.log(this.context.store.getState('isLoading'));
-    };
-    GoPath = () => {
-        console.log(this);
-        this.context.router.push('/live')
-    };
-    pageIndex = (curPage) => {
-        this.setState({currentPage: curPage})
-    };
     render() {
-
         let item = this.state.json.map((item, index) => {
             return (
                 <li key={index}>
@@ -68,24 +48,10 @@ class Index extends Component {
                     {item}
                 </ul>
                 <div className="content-right">
-                    <button onClick={this.show}>show</button>
-                    <button onClick={this.hide}>hide</button>
-                    <button onClick={this.GoPath}>GoPath</button>
-                    <Pagination
-                        totalPages={this.state.allPage}
-                        currentPage={this.state.currentPage}
-                        onChange={this.pageIndex}
-                    />
-                    <Link to={{pathname: "/cloud/more", query: {message: "123"}}}>lining</Link>
                     {this.props.children || <span>No Content</span>}
                 </div>
             </div>
         );
     }
 }
-
-Index.contextTypes = {
-    store: React.PropTypes.object,
-    router: React.PropTypes.object
-};
 export default Index;

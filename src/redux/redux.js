@@ -1,8 +1,7 @@
-
-const showLoadingAction = { type: 'showLoading' };
-const hideLoadingAction = { type: 'hideLoading' };
-
-//mapGetters
+// const showLoadingAction = { type: 'showLoading' };
+// const hideLoadingAction = { type: 'hideLoading' };
+//
+// //mapGetters
 function mapStateToProps(state) {
     return {
         value: state.count,
@@ -11,9 +10,9 @@ function mapStateToProps(state) {
 }
 //mapActions
 function mapDispatchToProps(dispatch) {
-    return {
-        showLoadingClick: () => dispatch(showLoadingAction),
-        hideLoadingClick: () => dispatch(hideLoadingAction)
-    }
+    // return {
+    //     showLoadingClick: () => dispatch(showLoadingAction),
+    //     hideLoadingClick: () => dispatch(hideLoadingAction)
+    // }
 }
 export {mapStateToProps,mapDispatchToProps}

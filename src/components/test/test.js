@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Loading from './public/loading'
-import {mapStateToProps,mapDispatchToProps} from'../redux/redux'
+import Loading from '../public/loading'
+import {mapStateToProps,mapDispatchToProps} from '../../redux/redux'
 class Counter extends Component {
     render() {
         const { value,isLoading, addClick ,delClick,showLoadingClick,hideLoadingClick} = this.props;
