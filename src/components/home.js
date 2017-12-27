@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Nav from './public/nav';
 import PropTypes from 'prop-types';
+import {mapStateToProps} from "../redux/redux"
+import { connect } from 'react-redux'
 import Loading from './public/loading'
 class Home extends Component{
     constructor(props) {
         super(props);
         this.state={
-
         };
     }
     static contextTypes = {
@@ -31,4 +32,6 @@ class Home extends Component{
     }
 }
 
-export default Home;
+export default connect(
+    mapStateToProps
+)(Home);
