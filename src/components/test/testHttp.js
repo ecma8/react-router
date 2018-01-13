@@ -18,7 +18,7 @@ class Home extends Component{
     GET=()=>{
         let params={
             x:this.refs.x.value,
-            y:this.refs.x.value
+            y:this.refs.y.value
         };
         http.get('/index.php?c=index&a=phone',{params:params})
         .then(data=>{
@@ -30,9 +30,8 @@ class Home extends Component{
     POST=()=>{
         let params={
             x:this.refs.x.value,
-            y:this.refs.x.value
+            y:this.refs.y.value
         };
-
         http.post('/index.php?c=index&a=phone',qs.stringify(params))
         .then(data=>{
             this.setState({

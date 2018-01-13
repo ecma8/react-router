@@ -10,31 +10,31 @@ class Home extends Component{
     static contextTypes = {
         store: React.PropTypes.object
     };
-    // get=(url,params,callback)=>{
-    //     if (params) {
-    //         let paramsArray = [];
-    //         Object.keys(params).forEach(key => paramsArray.push(key + '=' + params[key]))
-    //         if (url.search(/\?/) === -1) {
-    //             url += '?' + paramsArray.join('&')
-    //         } else {
-    //             url += '&' + paramsArray.join('&')
-    //         }
-    //     }
-    //     fetch(url,{
-    //         method: 'GET',
-    //     }).then(response => response.json()).then((response) => {
-    //         callback(response);
-    //     })
-    // };
-    // post=(url,params,callback)=>{
-    //     fetch(url,{
-    //         method: 'POST',
-    //         body:params
-    //     }).then((response) => response.json())
-    //     .then((responseJSON) => {
-    //         callback(responseJSON)
-    //     })
-    // };
+    get=(url,params,callback)=>{
+        if (params) {
+            let paramsArray = [];
+            Object.keys(params).forEach(key => paramsArray.push(key + '=' + params[key]))
+            if (url.search(/\?/) === -1) {
+                url += '?' + paramsArray.join('&')
+            } else {
+                url += '&' + paramsArray.join('&')
+            }
+        }
+        fetch(url,{
+            method: 'GET',
+        }).then(response => response.json()).then((response) => {
+            callback(response);
+        })
+    };
+    post=(url,params,callback)=>{
+        fetch(url,{
+            method: 'POST',
+            body:params
+        }).then((response) => response.json())
+        .then((responseJSON) => {
+            callback(responseJSON)
+        })
+    };
     componentDidMount() {
         // let json={
         //     x:1,

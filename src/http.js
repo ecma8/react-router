@@ -1,6 +1,6 @@
 import axios from 'axios'
 axios.defaults.timeout = 10000;
-axios.defaults.baseURL = 'http://open.ecma8.com';
+axios.defaults.baseURL = 'http://localhost:86/';
 axios.interceptors.request.use(config => {
     let loading=document.getElementById('loading');
     loading.style.display='block';
